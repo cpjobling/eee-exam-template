@@ -8,7 +8,7 @@ $$
 $$
 f(t)=\mathcal{L}^{-1}\left\{F(s)\right\}=\frac{1}{j2\pi}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}\, ds
 $$
-\subsection*{Table of Laplace Transform Properties}
+\subsection*{Laplace Transform Properties}
 
 \begin{longtable}[]{@{}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1351}}
@@ -45,7 +45,7 @@ No.
 \(\displaystyle{\int_{-\infty}^{t}f(\tau)d\tau}\) &
 \(\displaystyle{\frac{F(s)}{s}+ \frac{F(0^-)}{s}}\) \\[2ex]
 9. & Frequency integration & \(\displaystyle{\frac{f(t)}{t}}\) &
-\(\displaystyle{\int_s^\infty F(s)\,ds}\) \\[2ex]
+\(\displaystyle{\int_s^\infty F(\Omega)\,d\Omega}\) \\[2ex]
 10. & Time Periodicity & \(\displaystyle{f(t + nT)}\) &
 \(\displaystyle{\frac{\int_0^T f(t)e^{-st}\,dt}{1 - e^{-sT}}}\) \\[2.5ex]
 11. & Initial value theorem &
@@ -60,8 +60,8 @@ No.
 	\(\displaystyle{\frac{1}{j2\pi}\left(F_1(s)*F_2(s)\right)} \)\\[2.5ex]
 \end{longtable}
 
-\subsection*{Common Laplace Transform
-Pairs}\label{common-laplace-transform-pairs}
+\subsection*{Laplace Transform Pairs}
+\label{common-laplace-transform-pairs}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1}}
@@ -116,3 +116,6 @@ Re(\(s\)) \textgreater{} \(-\)Re(\(a\)) \\[2ex]
 \(\displaystyle \frac{s+a}{(s+a)^2 + \omega^2}\) & Re(\(s\))
 \textgreater{} \(-\)Re(\(a\)) \\[2.5ex]
 \end{longtable}
+
+Notes: ROC = region of convergence. The appearance of $u0(t)$ in the values shown in the $f(t)$
+column ensure that the signals and/or systems that they represent are causal.
