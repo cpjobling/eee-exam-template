@@ -1,0 +1,113 @@
+%% BEGIN  examhand.tex
+\def\FileDate{93/11/01}
+\def\FileVersion{1.0}
+%%
+%% COPYRIGHT 1993-2010, by Chris P. Jobling, C.P.Jobling@Swansea.ac.uk
+%%
+%% Control Systems: Examinations Handout
+
+%% $Id$
+
+\section*{\module\ \title\ -- Formulae for Examination Use}
+For ease of reference, this and the following pages may be detatched from the examination paper.
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\roman*]
+\item \textit{Even signal}: $x(t) = x(-t)$.
+\item \textit{Odd signal}: $-x(t) = x(-t)$.
+\item \textit{Composition of signal from odd and even components}: 
+$x(t) = x_e(t) + x_o(t)$ where $x_e(t) = \left(x(t) + x(-t)\right)/2$ and 
+$x_o(t) = \left(x(t) - x(-t)\right)/2$.
+\item \textit{Periodic signals}: A signal $x(t)$
+is periodic with fundamental frequency $\Omega$ \unit{\radian\per\second} 
+when $x(t) = x(t + nT)$ for all $n$ ($n$ is an integer). The fundamental period
+$𝑇 = 2\pi/\Omega$ \unit{\second}.
+\item \textit{Energy in a signal $x(t)$}: 
+$$
+E_x = \int_{-\infty}^{\infty} \left|x(t)\right|^2\,dt\quad\unit{\joule}
+$$
+\item \textit{Average power in a signal $x(t)$}: 
+$$
+P_x = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2} \left|x(t)\right|^2\,dt\quad\unit{\watt}
+$$
+\item \textit{Average power in a periodic signal $x(t)=x(t + nT)$}: 
+$$
+P_x = \frac{1}{T}\int_{0}^{T} \left|x(t)\right|^2\,dt\quad\unit{\watt}
+$$
+\item \textit{RMS power}: $\mathrm{RMS}_x = \sqrt{P_x}\,\quad\unit{\watt}$
+\item \textit{Mean value of a periodic signal $x(t) = x(t + nT)$}: 
+$$
+  M_x = \frac{1}{T}\int_0^T x(t)\,dt
+$$
+\item \textit{Crest factor}: $\mathrm{CF}_x = \frac{\left|x_{\mathrm{peak}}\right|}{\mathrm{RMS}_x}$.
+\item \textit{Absolute value of a complex number}: $\left|z\right| = \sqrt{zz^*}$
+where $z^*$ is the complex conjugate of $z$.
+\item \textit{Euler’s identity}:
+\begin{align*}
+  e^{j\theta} &= \cos{\theta} + j\sin{\theta}\\
+  \cos{\theta} &= \frac{1}{2}\left(e^{j\theta}+e^{-j\theta}\right)\\
+  \sin{\theta} &= \frac{1}{j2}\left(e^{j\theta}-e^{-j\theta}\right)
+\end{align*}
+\item \textit{Selected trig. identities}:
+\begin{align*}
+  \sin^2\theta &= \frac{1}{2}\left(1-\cos{2\theta}\right)\\
+  \cos^2\theta &= \frac{1}{2}\left(1+\cos{2\theta}\right)
+\end{align*}
+\item \textit{Selected integrals}:
+\begin{align*}
+  \int \cos\theta\,d\theta &= \sin\theta\\
+  \int \sin\theta\,d\theta &= - \cos \theta\\
+  \int te^{-at}\,dt &= \left(\frac{at + 1}{a^2}\right)e^{-at}
+\end{align*}
+\item \textit{Integration by parts}:
+$$
+\int udv = uv + \int vdu
+$$
+\item \textit{Convolution}:
+$$
+x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t - \tau)\,d\tau
+$$
+\item \textit{Impulse response}: $h(t) = \mathbf{T}\left\{\delta(t)\right\}$ where $\mathbf{T}$ is the system function.
+\item \textit{Step response}:
+$$
+s(t) = h(t)*u_0(t) = \int_0^t h(\tau)\,d\tau
+$$
+\item \textit{Signum (sign) function}: $\mathrm{sgn}(t) = 2u_0(t) - 1$
+\item \textit{Exponential Fourier series}:
+\begin{align*}
+  X(t) &= \sum_{k = -n}^{n} C_k e^{jk\Omega_0 t}\\
+  C_0 &= \frac{1}{T}\int_0^T x(t)\,dt\\
+  C_k &= \frac{1}{T}\int_0^T x(t)e^{jk\Omega_0 t}\,dt\\ 
+      &= \frac{1}{2\pi}\int_0^{2\pi} x(\theta)e^{jk\theta}\,d\theta
+\end{align*}
+\item \textit{Trig. Fourier series}:
+$$
+F(s) = \frac{1}{2}a_0 + \sum_{k=1}^{\infty} \left( a_k \cos k\Omega_0 t + b_k \sin k\Omega_0 t\right)
+$$
+\item \textit{Trig. Fourier series coefficients from exponential Fourier series coefficients}:
+\begin{align*}
+  a_0 &= 2C_0\\
+  a_k &= C_k + C_{-k}\\
+  b_k &= j\left(C_k - C_{-k}\right)
+\end{align*}
+\item \textit{Parseval's theorem}: 
+$$
+\frac{1}{T}\int_{-T/2}^{T/2} \left|x(t)\right|^2\, dt = \sum_{k=\infty}^{\infty} \left|C_k\right|^2
+$$
+\end{enumerate}
+\end{multicols}
+
+
+
+
+\endinput
+
+
+
+
+
+
+
+
+
+
