@@ -27,18 +27,20 @@
 
 % Headers and footers
 \pagestyle{headandfoot}
+\runningheadrule
+\runningheader{\module}{\title}{\session}
 \firstpagefootrule
 \firstpagefooter{Firstpage}{Page \thepage\ of \numpages}{}
 \runningfootrule
 \runningfooter{Running}{Page \thepage\ of \numpages}{}
-
+\headsep=10mm
 %%%%%%%%%%%%%%%%%%%%%%%%
-%\setlength{\textwidth}{16.5cm}
-%\setlength{\textheight}{26.0cm}
-%\setlength{\topmargin}{-2.0cm}
+\setlength{\textwidth}{17cm}
+\setlength{\textheight}{25.0cm}
+\setlength{\topmargin}{-1cm}
 
-%\setlength{\oddsidemargin}{0.0cm}
-%\setlength{\evensidemargin}{0.0cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
 
 \def\dept#1{\def\dept{#1}}
 \def\module#1{\def\module{#1}}
