@@ -1,0 +1,61 @@
+
+
+\subsection*{The Laplace Transform}
+$$
+F(s)=\mathcal{L}\left\{f(t)\right\}=\int_0^{\infty} f(t)e^{-st}\, dt
+$$
+\subsection*{The Inverse Laplace Transform}
+$$
+f(t)=\mathcal{L}^{-1}\left\{F(s)\right\}=\frac{1}{j2\pi}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}\, ds
+$$
+\subsection*{Table of Laplace Transform Properties}
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1351}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2703}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2162}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3784}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+No.
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Name}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Time Domain} \(f(t)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+	\textbf{Complex Frequency Domain} \(F(s)\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. & Linearity & \(a_1f_1(t)+a_2f_2(t)+\cdots+a_nf_n(t)\) &
+\(a_1F_1(s)+a_2F_2(s)+\cdots+a_nF_n(s)\) \\[3ex]
+2. & Time shifting & \(\displaystyle{f(t-a)}u_0(t-a)\) &
+\(\displaystyle{e^{-a s}F(s)}\) \\[1.5ex]
+3. & Frequency shifting & \(\displaystyle{e^{-as}f(t)}\) &
+\(\displaystyle{F(s+a)}\) \\[1.5ex]
+4. & Time scaling & \(f(a t)\) &
+\(\displaystyle{\frac{1}{a}F\left(\frac{s}{a}\right)}\) \\[1.5ex]
+5. & Time differentiation & \(\displaystyle{\frac{d}{dt}\,f(t)}\) &
+\(\displaystyle{F(s)-f(0^-)}\) \\[1.5ex]
+7. & Frequency differentiation & \(\displaystyle{tf(t)}\) &
+\(\displaystyle{-\frac{d}{ds}F(s)}\) \\[1.5ex]
+8. & Time integration &
+\(\displaystyle{\int_{-\infty}^{t}f(\tau)d\tau}\) &
+\(\displaystyle{\frac{F(s)}{s}+ \frac{F(0^-)}{s}}\) \\[2ex]
+9. & Frequency integration & \(\displaystyle{\frac{f(t)}{t}}\) &
+\(\displaystyle{\int_s^\infty F(s)\,ds}\) \\[2ex]
+10. & Time Periodicity & \(\displaystyle{f(t + nT)}\) &
+\(\displaystyle{\frac{\int_0^T f(t)e^{-st}\,dt}{1 - e^{-sT}}}\) \\[2.5ex]
+11. & Initial value theorem &
+\(\displaystyle{\lim_{t\rightarrow 0} f(t)}\) &
+\(\displaystyle{\lim_{s\rightarrow \infty}sF(s) = f(0^-)}\) \\[1.5ex]
+12. & Final value theorem &
+\(\displaystyle{\lim_{t\rightarrow \infty} f(t)}\) &
+\(\displaystyle{\lim_{s\rightarrow 0}sF(s) = f(\infty)}\) \\[2ex]
+13. & Time convolution & \(\displaystyle{f_1(t)*f_2(t)}\) &
+\(\displaystyle{F_1(s) F_2(s)}\) \\[2ex]
+14. & Frequency convolution & \(\displaystyle{f_1(t)f_2(t)}\) &
+	\(\displaystyle{\frac{1}{j2\pi}\left(F_1(s)*F_2(s)\right)} \)\\[2.5ex]
+\end{longtable}
