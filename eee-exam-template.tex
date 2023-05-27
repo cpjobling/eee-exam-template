@@ -1,0 +1,161 @@
+\documentclass[11pt,addpoints,answers]{exam}
+
+%%%%%%%%% DeptEEE Standard LaTeX Template Starts Here %%%%%%%%%
+%%%%%%%% Based on Physics version thanks to Dave Dunbar %%%%%%%%
+
+
+%BEGIN DO NOT EDIT
+\input EEERubricImportEnglish2022v1
+%END DO NOT EDIT
+
+%Uncomment ones of these lines.
+%\dept{Computer Science}
+%\dept{Mathematics}
+\dept{Electronic and Electrical Engineering}
+%\dept{Physics}
+%... or - if not one of these depts - add \dept{your dept name}
+
+%Update these values 
+\module{ABC123} %<<<<<<<<<< replace ABC123 with your module code
+\title{TITLE}          %<<<<<<<<<< replace TITLE with your module title
+\session{May-June 2019/2020}           %<<<<<<<<<< replace 2019/2020 with the current academic year
+
+%Update this value - durations should be in HOURS and MINUTES (e.g 1hour 30 min - not 90 min)
+\timeallowed{x hours} %<<<<<<<< change x hours to the duration of your exam
+
+
+%These lines control information on  dictionaries calculators and open book exams - uncomment as required
+% FOR CLOSED BOOK EXAMS WITH NOT CALCULATORS WHICH ALLOW ENGLISH/WELSH DICTIONARIES,
+% YOU CAN LEAVE THIS ALL AS IT IS.
+
+%DICTIONARIES
+%\englishwelshallowed %<<<<<<<<<  Candidates may only refer to the English and Welsh language dictionaries available  - this is the default
+%\englishonly                %<<<<<<<<<  Candidates may only refer to the English dictionaries available
+%\providedglossary        %<<<<<<<<<  Pre-prepared individual bilingual glossary may be used
+%\translationdict           %<<<<<<<<<  Candidates may use Welsh to/from English translation dictionaries
+%\dictnotallowed          %<<<<<<<<<  The use of any dictionary is not allowed
+
+%CALCULATORS
+%\nocalculators             %<<<<<<<<<  No calculators are permitted - this is the default
+\univcalculators           %<<<<<<<<<  Candidates will be supplied with a UNIVERSITY calculator
+%\approvedcalculators    %<<<<<<<<< Candidates may used apporved non-programmable calculators
+
+% OPEN/CLOSED BOOK
+%\notopenbook     %<<<<<<<<< The exam is not open book - this is the default
+%\openbook          %<<<<<<<<< Exam is open book
+
+% Exam information - e.g. 'Answer x questions from y' - 'Answer all questions' etc.
+% if you need italic or bold use \textit{..} and \textbf{...}  NOT  \it or \bf (which will look awful)
+\examinformation{None}     %<<< Replace 'none' with your exam information
+
+% Any special instructions 
+\specialinstructions{None}  %<<< If you have special instructions, replace 'none' with them
+
+% some users need the following package - you know if it's you  - uncomment if required
+\usepackage{amsmath}
+
+%...and add other packages as appropriate here
+
+%BEGIN DO NOT EDIT
+\begin{document}
+    \begingroup
+    %\fontfamily{phv}\selectfont
+   \begin{figure}[t]
+   \begin{flushright}
+   {\includegraphics*[height=3.0truecm]{SULogo.eps}}
+   % \label{BoxFigure}
+   \end{flushright}
+    \end{figure}
+    
+   \noindent{\normalsize\textbf{{Faculty of Science and Engineering}}}
+   \vskip 4mm
+   \noindent{\normalsize{\dept}}
+   \vskip 4mm
+   \noindent{\Large{\textbf{\module}}}
+   \noindent{\oneline{\Large{\textbf{\title}}}}
+   \vskip 4mm
+   \noindent{\normalsize\textbf{{\session}}}
+   \vskip 4mm
+   \noindent{\normalsize\textbf{{Time Allowed: \duration}}}
+   \vskip 4mm
+   \noindent{\textbf{Do NOT turn over your question paper until instructed to do so.}}
+   
+   \vskip 4mm
+   
+   \noindent{\textbf{\textit{Exam Paper Information}}}
+   \vskip 4mm
+   \begingroup
+   \examinfo
+   \endgroup
+   \vskip 4mm
+   
+   \noindent{\textbf{\textit{Special Instruction(s)}}}
+   \vskip 4mm
+   \begingroup
+   \specialinfo
+   \endgroup
+   \vskip 4mm
+   
+   \noindent{\textbf{\textit{Specific Items}}}
+   \begin{itemize}
+   \item[] {\small{Dictionaries - \dictionaries}}
+   \item[] {\small{Calculators - \calculator}}
+   \item[] {\small{Open Book - \open}}
+   \end{itemize}
+   
+   \vskip 10mm
+   \par
+   \begingroup
+   \setlength{\parindent}{0pt}
+   %\BLURB
+   \endgroup
+   \newpage
+
+
+% END DO NOT EDIT
+
+%
+% ENTER ANY ADDITIONAL INSTRUCTIONS THAT CANNOT FIT ON FRONT PAGE HERE
+%
+% Do NOT put any instructions that invigilators must be aware of anywhere except the 1st page
+%
+% ENTER TEXT OF PAPER HERE
+% Pick a standard, readable font. Advice from Student
+% Services is that Sans Serif fonts are more accessible (however, evidence
+% does not appear very strong). Exams Office prefers Arial 11.
+% It's recognised that this may not be possible/appropriate in all cases
+
+\begin{questions}
+    \question[25] Answer all parts
+    \begin{parts} 
+        \part Answer all subparts
+        \begin{subparts}%
+            \subpart Answer the following:
+            \begin{subsubparts}%
+                \subsubpart[2] Describe the colur blue.
+            \end{subsubparts}
+        \end{subparts}
+    \end{parts}
+\end{questions}
+
+
+% End matter -- e.g. formulae here
+\newpage
+\label{formulae}
+\input{examhand}
+\input{statespace}
+
+\newpage
+\input{landz-transforms}
+
+\newpage
+\input{landz-properties}
+
+
+%BEGIN DO NOT EDIT
+\finalize 
+\label{last-page}
+\end{document}
+% END DO NOT EDIT
+
+

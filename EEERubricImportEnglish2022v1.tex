@@ -1,0 +1,149 @@
+%%%%%%%%% English Standard LaTeX Template Starts Here %%%%%%%%%
+\usepackage[fira]{fontsetup}
+%\usepackage{helvet}
+%\usepackage[italic]{mathastext}
+% 'isomath' sets upper case greek letters italic in accordance with 
+% the International Standard ISO 80000-2
+%\usepackage{isomath}
+%\renewcommand{\familydefault}{\sfdefault}
+%\defaultfontfeatures{Ligatures=TeX}
+\RequirePackage{xltxtra}
+%\RequirePackage{unicode-math}
+%\setmathfont{XITS Math}
+\usepackage{gensymb}
+\usepackage{cancel}
+\usepackage{enumitem}
+
+\usepackage{lastpage}
+\usepackage{xifthen}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{lipsum}
+\usepackage[paper=a4paper,margin=3cm]{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{siunitx}
+
+% Headers and footers
+\pagestyle{headandfoot}
+\firstpagefootrule
+\firstpagefooter{Firstpage}{Page \thepage\ of \numpages}{}
+\runningfootrule
+\runningfooter{Running}{Page \thepage\ of \numpages}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\textwidth}{16.5cm}
+%\setlength{\textheight}{26.0cm}
+%\setlength{\topmargin}{-2.0cm}
+
+%\setlength{\oddsidemargin}{0.0cm}
+%\setlength{\evensidemargin}{0.0cm}
+
+\def\dept#1{\def\dept{#1}}
+\def\module#1{\def\module{#1}}
+\def\title#1{\def\title{#1}}
+\def\coordinator#1{\def\coordinator{#1}}
+\def\timeallowed#1{\def\duration{#1}}
+\def\session#1{\def\session{#1}}
+
+\def\examinformation#1{\def\examinfo{#1}}
+\def\specialinstructions#1{\def\specialinfo{#1}}
+
+\def\dictionaries{Candidates may only refer to the English and Welsh language dictionaries available} %default option
+\def\englishonly{%
+\def\dictionaries{Candidates may only refer to the English dictionaries available}}
+\def\providedglossary{%
+\def\dictionaries{Pre-prepared individual bilingual glossary may be used}}
+\def\translationdict{%
+\def\dictionaries{Candidates may use Welsh to/from English translation dictionaries}}
+\def\dictnotallowed{%
+\def\dictionaries{The use of any dictionary is not allowed}}
+\def\englishwelshallowed{}
+
+\def\calculator{Candidates may NOT use a calculator} %default option
+\def\univcalculators{%
+\def\calculator{Candidates may use University calculators provided}}
+\def\approvedcalculators{%
+\def\calculator{Candidates may use approved non-progammable calculators }}
+\def\nocalculators{}
+
+\def\open{This is NOT an Open Book Exam} %default option
+\def\notopenbook{}
+\def\openbook{\def\open{This is an Open Book Exam}}
+
+
+\newcommand{\oneline}[1]{%
+  \newdimen{\namewidth}%
+  \setlength{\namewidth}{\widthof{#1}}%
+  \ifthenelse{\lengthtest{\namewidth < \textwidth}}%
+  {#1}% do nothing if shorter than text width
+  {\resizebox{\textwidth}{!}{#1}}% scale down
+}
+
+\def\titlepage{
+\begingroup
+ %\fontfamily{phv}\selectfont
+\begin{figure}[t]
+\begin{flushright}
+{\includegraphics*[height=3.0truecm]{SULogo.eps}}
+% \label{BoxFigure}
+\end{flushright}
+ \end{figure}
+ 
+\noindent{\normalsize\textbf{{Faculty of Science and Engineering}}}
+\vskip 4mm
+\noindent{\normalsize{\dept}}
+\vskip 4mm
+\noindent{\Large{\textbf{\module}}}
+\noindent{\oneline{\Large{\textbf{\title}}}}
+\vskip 4mm
+\noindent{\normalsize\textbf{{\session}}}
+\vskip 4mm
+\noindent{\normalsize\textbf{{Time Allowed: \duration}}}
+\vskip 4mm
+\noindent{\textbf{Do NOT turn over your question paper until instructed to do so.}}
+
+\vskip 4mm
+
+\noindent{\textbf{\textit{Exam Paper Information}}}
+\vskip 4mm
+\begingroup
+\examinfo
+\endgroup
+\vskip 4mm
+
+\noindent{\textbf{\textit{Special Instruction(s)}}}
+\vskip 4mm
+\begingroup
+\specialinfo
+\endgroup
+\vskip 4mm
+
+\noindent{\textbf{\textit{Specific Items}}}
+\begin{itemize}
+\item[] {\small{Dictionaries - \dictionaries}}
+\item[] {\small{Calculators - \calculator}}
+\item[] {\small{Open Book - \open}}
+\end{itemize}
+
+\vskip 10mm
+\par
+\begingroup
+\setlength{\parindent}{0pt}
+%\BLURB
+\endgroup
+\end{titlepage}
+%END Do Not Change
+\endgroup
+\newpage 
+} %%%% titlepage
+
+\def\finalize{
+\begin{center}
+\vfill
+\begingroup
+\textbf{\Large End of Paper}
+\endgroup
+\end{center}}
+
