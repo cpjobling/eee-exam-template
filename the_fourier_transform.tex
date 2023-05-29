@@ -1,12 +1,28 @@
 \subsection*{The Fourier Transform}
 
+$$
+F(j\omega) = \mathcal{F}\left\{f(t)\right\} = \int_{-\infty}^{\infty} f(t)e^{-j\omega t}\,dt
+$$
+
 \subsection*{The Inverse Fourier Transform}
+
+$$
+f(t) = \mathcal{F}^{-1}\left\{F(s)\right\} = \int_{-\infty}^{\infty} F(s)e^{j\omega t}\,dt
+$$
 
 \subsection*{Properties of the Fourier Transform}
 
 \subsection*{The Discrete Fourier Transform}
 
+$$
+X[m] = \sum_{n=0}^{N-1} x[n]\exp(-j2\pi\frac{nm}{N})
+$$
+
 \subsection*{The Inverse Discrete Fourier Transform}
+
+$$
+x[n] = \sum_{m=0}^{N-1} X[m]\exp(j2\pi\frac{nm}{N})
+$$
 
 \subsection*{Fourier Transform Pairs}
 Notes: The appearance of $u_0(t)$ in the values shown in the $f(t)$ column ensure that 
