@@ -1,0 +1,52 @@
+%% Fourier transform table
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0400}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+No.\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Name}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(f(t)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(F(j\omega)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Remarks}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. & Dirac delta & \(\delta(t)\) & \(1\) & Constant energy at \emph{all}
+frequencies. \\
+2. & Time sample & \(\delta(t-t_0)\) & \(e^{-j\omega t_0}\) & \\[1.5ex]
+3. & Phase shift & \(e^{j\omega_0 t}\) &
+\(2\pi\delta(\omega - \omega_0)\) & \\[3ex]
+4. & \emph{Signum} & \(\operatorname{sgn} t\) &
+\(\displaystyle{\frac{2}{j\omega}}\) & also known as sign function \\[3ex]
+5. & Unit step & \(u_0(t)\) &
+\(\displaystyle{\frac{1}{j\omega}+\pi\delta(\omega)}\) & \\[3ex]
+6. & Cosine & \(\cos \omega_0 t\) &
+\(\pi\left[\delta(\omega-\omega_0)+\delta(\omega+\omega_0)\right]\) & \\[2ex]
+7. & Sine & \(\sin \omega_0 t\) &
+\(-j\pi\left[\delta(\omega-\omega_0)-\delta(\omega+\omega_0)\right]\)
+& \\[2ex]
+8. & Single pole & \(e^{-at}u_0(t)\) &
+\(\displaystyle{\frac{1}{j\omega + a}}\) & \(a > 0\) \\[3ex]
+9. & Double pole & \(te^{-at}u_0(t)\) &
+\(\displaystyle{\frac{1}{(j\omega + a)^2}}\) & \(a > 0\) \\[3ex]
+10. & Complex pole (cosine component) &
+\(e^{-at}\cos \omega_0 t\;u_0(t)\) &
+\(\displaystyle{\frac{j\omega + a}{(j\omega + a)^2+\omega_0^2}}\) &
+\(a >0\) \\[3ex]
+11. & Complex pole (sine component) &
+\(e^{-a t}\sin \omega_0 t\;u_0(t)\) &
+\(\displaystyle{\frac{\omega}{(j\omega + a)^2+\omega_0^2}}\) &
+\(a >t 0\) \\[3ex]
+\end{longtable}
+
+\endinput
