@@ -1,7 +1,7 @@
 # A LaTeX template for typesetting exams 
 
 `eee-exam-template` is a LaTeX template designed to facilitate typesetting
-examinations for the Department of Electronici and Electrical Engineerina
+examinations for the Department of Electronic and Electrical Engineering
 at Swansea University.
 
 ## Motivation
