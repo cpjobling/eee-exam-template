@@ -33,16 +33,24 @@
 \pointsdroppedatright
 \extrawidth{2in}
 \pointformat{[\textbf{\thepoints}]}
-
+\totalformat{\textbf{({Total for Question \thequestion: \totalpoints\ marks})}}
 
 % Headers and footers
 \pagestyle{headandfoot}
 \runningheadrule
-\runningheader{\module}{\title}{\session}
+\newcommand{\continuedmessage}{%
+  \ifcontinuation{Question \ContinuedQuestion\ continues\ldots}{}%
+}
+\firstpageheader{}{}{}
+\runningheader{\continuedmessage}
+              {\module: \title}
+              {\session}
+\footer{} {Page \thepage\ of \numpages}
+       {\ifincomplete{Question \IncompleteQuestion\ continues
+         on the next page\ldots}{}}
 \firstpagefootrule
-\firstpagefooter{}{Page \thepage\ of \numpages}{}
+\firstpagefooter{}{}{}
 \runningfootrule
-\runningfooter{}{Page \thepage\ of \numpages}{}
 \headsep=10mm
 %%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\textwidth}{17cm}
